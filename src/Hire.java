@@ -1,17 +1,19 @@
-/**
- * Created by canhu on 21.05.2017.
- */
-public class Hire {
-    private Users u;
-    private Vehicles v;
+import javax.xml.crypto.Data;
+import java.io.Serializable;
+
+
+public class Hire implements Serializable{
     private User user;
     private Vehicle vehicle;
     private int id, time;
     private String status;
-    static int ID=1;
 
-    public Hire(User u, Vehicle v, int time){
-        this.id= ID++;
+    public String getStatus() {
+        return status;
+    }
+
+    public Hire(User u, Vehicle v, int time, Database db){
+        this.id= db.getIdHire();
         this.user = u;
         this.vehicle= v;
         this.time= time;
@@ -29,7 +31,9 @@ public class Hire {
         return status= "Returned";
     }
 
-    public String toString(){return "User ID:\n"+user.getId()+"\nName:\n"+user.getName()+"\n"+vehicle.getClass()+"\n"+vehicle.getID()+" "
-            +vehicle.getName()+" "+ vehicle.getMilage()+"\nHire days: "+time+"\nStatus: "+status;}
+//    public String toString(){return "User ID:\n"+user.getId()+"\nName:\n"+user.getName()+"\n"+vehicle.getClass()+"\n"+vehicle.getID()+" "
+//            +vehicle.getName()+" "+ vehicle.getMilage()+"\nHire days: "+time+"\nStatus: "+status;}
+    public String toString(){return "Hire ID: "+id+"\n"+user.toString2()+"\n"+vehicle.toString2()+"\nDay's: "+time+"\nStatus: "+status+"\n"; }
+
 
 }

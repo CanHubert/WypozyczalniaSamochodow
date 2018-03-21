@@ -1,7 +1,11 @@
-package PACKAGE_NAME;
+import java.util.Comparator;
 
-/**
- * Created by canhu on 31.05.2017.
- */
-public class CompareByType {
+
+public class CompareByType implements Comparator<Vehicle>{
+    @Override
+    public int compare(Vehicle o1, Vehicle o2) {
+        String s1 = o1.getClass().toString();
+        String s2 = o2.getClass().toString();
+        return s1.compareTo(s2);
+    }
 }

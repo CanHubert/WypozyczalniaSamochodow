@@ -1,42 +1,42 @@
-/**
- * Created by canhu on 21.05.2017.
- */
+
 public class Truck extends Car {
     private int Load;//ładunek,pojemnosć
     private int ID;
     private double milage;
     private String name;
     private boolean OnStock;
-    public Truck(String name,double milage,int load, boolean OnStock){
-        super(name,milage,OnStock);
-        this.ID=Vehicle.ID++;
+    public Truck(String name,double milage,int load,Database db){
+        super(name,milage);
+        this.ID= db.getIdVehicle();
         this.name=name;
         this.Load= load;
         this.milage=milage;
-        //IncreaseID();
+        this.OnStock=super.OnStock;
     }
     @Override
     public boolean AbleToHire() {
-        return OnStock == true;
-
+        return OnStock;
     }
     @Override
     public void On() {
-
         if(!OnStock){
-            OnStock= true;
+            OnStock= true;}}
 
-        }
-
-    }
     @Override
     public void Off(){
         if(OnStock)  {
-            OnStock=false;
-        }
-    }
+            OnStock=false;}}
 
-    public String toString(){return ID+" "+name+" "+milage+" "+Load+" "+OnStock;}
+    public String toString(){
+        if(OnStock)
+            return "ID: "+ID+" | Type: Truck | Name: "+name+" | Milage: "+ milage+" | Load: "+ Load+" | On Stock: YES";
+        else
+            return "ID: "+ID+" | Type: Truck | Name: "+name+" | Milage: "+ milage+" | Load: "+ Load+" | On Stock: NO";
+    }
+    @Override
+    public String toString2(){
+        return "ID: "+ID+" | Type: Truck | Name: "+name+" | Milage: "+ milage+" | Load: "+ Load;
+    }
 
     @Override
     public int getID() {

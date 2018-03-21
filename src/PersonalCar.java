@@ -1,6 +1,4 @@
-/**
- * Created by canhu on 21.05.2017.
- */
+
 public class PersonalCar extends Car {
     private String Transmission;//manual/auto
     private String name;
@@ -8,39 +6,38 @@ public class PersonalCar extends Car {
     private boolean OnStock;
     private int ID;
 
-
-
-    public PersonalCar(String name, double milage, String Transmission, boolean OnStock){
-        super(name,milage,OnStock);
-        this.ID=Vehicle.ID++;
+    public PersonalCar(String name, double milage, String Transmission,Database db){
+        super(name,milage);
+        this.ID= db.getIdVehicle();
         this.Transmission=Transmission;
         this.name= name;
-        this.OnStock=OnStock;
         this.milage=milage;
-
+        this.OnStock=super.OnStock;
     }
-    public String toString(){return ID+" "+name+" "+ milage+" "+ Transmission+" "+ OnStock;}
+    public String toString(){
+        if(OnStock)
+            return "ID: "+ID+" | Type: Car | Name: "+name+" | Milage: "+ milage+" | Transmission: "+ Transmission+" | On Stock: YES";
+        else
+            return "ID: "+ID+" | Type: Car | Name: "+name+" | Milage: "+ milage+" | Transmission: "+ Transmission+" | On Stock: NO";}
+
+    @Override
+    String toString2() {
+        return "ID: "+ID+" | Type: Car | Name: "+name+" | Milage: "+ milage+" | Transmission: "+ Transmission;
+    }
 
     @Override
     public boolean AbleToHire() {
-        return OnStock == true;
+        return OnStock;
     }
+
     @Override
     public void On() {
-
         if(!OnStock){
-            OnStock= true;
+            OnStock= true;}}
 
-        }
-
-    }
     @Override
     public void Off(){
-        if(OnStock)  {
-            OnStock=false;
-        }
-    }
-
+        if(OnStock)  {OnStock=false;}}
 
     @Override
     public int getID() {

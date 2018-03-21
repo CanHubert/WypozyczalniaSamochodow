@@ -1,49 +1,43 @@
-/**
- * Created by canhu on 21.05.2017.
- */
+
 public class Motorcycle extends Vehicle {
-    private int weight,ID;
+    private int ID;
     private String name;
-    private double milage;
+    private double milage,weight;
     private boolean OnStock;
-    public Motorcycle(String name,double milage,int weight ,boolean OnStock){
-        super( name, milage, OnStock);
-        this.ID=Vehicle.ID++;
+    public Motorcycle(String name,double milage,double weight,Database db){
+        super( name, milage);
+        this.ID= db.getIdVehicle();
         this.name= name;
         this.milage= milage;
-        this.OnStock= OnStock;
         this.weight= weight;
-        //IncreaseID();
+        this.OnStock=super.OnStock;
     }
     @Override
     public boolean AbleToHire() {
-        return OnStock == true;
-
-    }
+        return OnStock;}
 
     @Override
     public void On() {
-
         if(!OnStock){
-            OnStock= true;
+            OnStock= true;}}
 
-        }
-
-    }
     @Override
     public void Off(){
         if(OnStock)  {
-            OnStock=false;
-        }
+            OnStock=false;}
     }
-
-
-    public String toString(){return ID+" "+name+" "+ milage+" "+ weight+" "+ OnStock;}
+    public String toString(){
+        if(OnStock)
+            return "ID: "+ID+" | Type: Motorcycle | Name: "+name+" | Milage: "+ milage+" | Weight: "+ weight+" | On Stock: YES";
+        else
+            return "ID: "+ID+" | Type: Motorcycle | Name: "+name+" | Milage: "+ milage+" | Weight: "+ weight+" | On Stock: NO"; }
+    @Override
+    public String toString2(){
+        return "ID: "+ID+" | Type: Motorcycle | Name: "+name+" | Milage: "+ milage+" | Weight: "+ weight;
+    }
 
     @Override
     public int getID() {
         return ID;
     }
-
-
 }

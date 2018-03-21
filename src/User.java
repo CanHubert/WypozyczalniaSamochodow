@@ -1,37 +1,40 @@
-/**
- * Created by canhu on 21.05.2017.
- */
-public class User {
+import java.io.Serializable;
+
+
+public class User implements Serializable, HasAuto{
     private String name;
-    static int ID=1;
     private int id;
     private boolean hasAuto= false;
 
-    public User(String name){
-        this.id=ID++;
+    public User(String name,Database db){
+        this.id= db.getIdUser();
         this.name= name;
     }
 
     public String toString(){
-        return id+" "+name+" Has auto:"+hasAuto;
+        if(hasAuto)
+        return "ID: "+id+" | name: "+name+" | Auto: YES";
+        else return "ID: "+id+" | name: "+name+" | Auto: NO";}
+
+    public String toString2(){
+        return "ID: "+id+" | name: "+name;
     }
+
 
     public int getId() {
         return id;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public boolean isHasAuto() {
+    @Override
+    public boolean CanHire() {
         return hasAuto;
     }
+    @Override
     public void hasAutoOn(){
         if(!hasAuto){
             hasAuto= true;
         }
     }
+    @Override
     public void hasAutoOff(){
         if(hasAuto)  {
             hasAuto=false;

@@ -1,10 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by canhu on 21.05.2017.
- */
-public class Vehicles implements GetVehicleByID   {
+
+public class Vehicles implements GetVehicleByID , Serializable {
     private List<Vehicle> vehicles;
 
     public Vehicles(){
@@ -15,27 +14,59 @@ public class Vehicles implements GetVehicleByID   {
         vehicles.add(v);
     }
 
-    public void remove(int i){
-        vehicles.remove(i);
+    public void remove(Vehicle v, Database db){
+        if(!isVehicleExist(v,db))
+            throw  new VehicleExistException();
+        if(!OutOfStock(v,db))
+            throw  new VehicleOnStockException();
+
+        vehicles.remove(v);
     }
 
     public String toString(){
         return listString(vehicles);
     }
-    public Vehicle get(int i){
-        //for()
-         return vehicles.get(i-1);
 
-    }
 
     private String listString(List<Vehicle> list) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("Vehicles:\n");
         for (Vehicle v : list) {
             sb.append(v).append("\n");
         }
         return sb.toString();
     }
+    public String printByType(){
+        List<Vehicle> list = new ArrayList<>(vehicles);
+        list.sort(new CompareByType());
+        return listString(list);
+    }
+    public String printByID(){
+        List<Vehicle> list = new ArrayList<>(vehicles);
+        list.sort(new CompareByID());
+        return listString(list);
+    }
+    public String printBySpecID(int i, Database db){
+        Vehicle veh = getVehicleByID(i);
+        if(!isVehicleExist(veh,db))
+            throw new VehicleExistException();
+        return veh.toString();
+    }
+    private boolean isVehicleExist(Vehicle vehicle, Database db){
+        for(Vehicle v: db.getV().getVehicles()){
+            if(v.equals(vehicle))
+                return true;}
+        return  false;
+    }
+    private boolean OutOfStock(Vehicle vehicle, Database db){
+        for(Vehicle v: db.getV().getVehicles())
+            if(v.equals(vehicle))
+                return vehicle.AbleToHire();
+        return  false;
+    }
 
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
 
     @Override
     public Vehicle getVehicleByID(int i) {

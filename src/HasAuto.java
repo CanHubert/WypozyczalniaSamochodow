@@ -1,7 +1,6 @@
-package PACKAGE_NAME;
 
-/**
- * Created by canhu on 29.05.2017.
- */
 public interface HasAuto {
+    boolean CanHire();
+    void hasAutoOn();
+    void hasAutoOff();
 }
