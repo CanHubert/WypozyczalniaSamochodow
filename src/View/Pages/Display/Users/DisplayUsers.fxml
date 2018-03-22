@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="475.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Display.Users.DisplayUsersController">
+    <top>
+        <Label text="Users" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </top>
+    <bottom>
+        <Label prefHeight="21.0" prefWidth="262.0" text="Menu-&gt;Display-&gt;Users" BorderPane.alignment="CENTER_LEFT" />
+    </bottom>
+    <left>
+        <Region prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <Region prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#DisplayAllUsers" prefHeight="31.0" prefWidth="266.0" text="All" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="275.0" text="With vehicles" />
+                <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="280.0" text="Without vehicles" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"  prefHeight="31.0" prefWidth="272.0" text="By ID" />
+            <Button layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#DisplayButton" prefHeight="31.0" prefWidth="272.0" text="Back" />
+            </children>
+            <padding>
+                <Insets top="30.0" />
+            </padding>
+        </VBox>
+    </center>
+
+</BorderPane>
