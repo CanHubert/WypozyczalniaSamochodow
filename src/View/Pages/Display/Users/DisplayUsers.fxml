@@ -29,10 +29,10 @@
         <VBox prefHeight="200.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
             <children>
                 <Button mnemonicParsing="false" onAction="#DisplayAllUsers" prefHeight="31.0" prefWidth="266.0" text="All" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="275.0" text="With vehicles" />
-                <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="280.0" text="Without vehicles" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"  prefHeight="31.0" prefWidth="272.0" text="By ID" />
-            <Button layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#DisplayButton" prefHeight="31.0" prefWidth="272.0" text="Back" />
+                <Button layoutX="10.0" layoutY="10.0" onAction="#displayWithVehicles" mnemonicParsing="false" prefHeight="31.0" prefWidth="275.0" text="With vehicles" />
+                <Button layoutX="10.0" layoutY="41.0" onAction="#displayWithoutVehicles" mnemonicParsing="false" prefHeight="31.0" prefWidth="280.0" text="Without vehicles" />
+                <Button layoutX="10.0" layoutY="10.0" onAction="#displayByID" mnemonicParsing="false"  prefHeight="31.0" prefWidth="272.0" text="By ID" />
+            <Button layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="272.0" text="Back" />
             </children>
             <padding>
                 <Insets top="30.0" />

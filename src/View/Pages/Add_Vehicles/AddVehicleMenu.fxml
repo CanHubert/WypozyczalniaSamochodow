@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Add_Vehicles.AddVehicleController">
+<BorderPane prefHeight="475.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Add_Vehicles.AddVehicleMenuController">
     <center>
         <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
             <children>
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="223.0" text="Add Vehicle" />
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Remove Vehicle" />
+                <Button mnemonicParsing="false" onAction="#addTruck" prefHeight="31.0" prefWidth="223.0" text="Add Truck" />
+            <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#addPersonalCar" prefHeight="31.0" prefWidth="223.0" text="Add Personal Car" />
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#addMotorcycle" prefHeight="31.0" prefWidth="223.0" text="Add Motorcycle" />
+                <Button mnemonicParsing="false" onAction="#removeVehicle" prefHeight="31.0" prefWidth="207.0" text="Remove Vehicle" />
                 <Button mnemonicParsing="false" onAction="#MainMenuButton" prefHeight="31.0" prefWidth="244.0" text="Back" />
             </children>
             <opaqueInsets>
@@ -22,7 +25,7 @@
         </VBox>
     </center>
     <top>
-        <Label alignment="CENTER" prefHeight="54.0" prefWidth="211.0" text="Add/remove vehicle" textAlignment="CENTER" BorderPane.alignment="CENTER">
+        <Label alignment="CENTER" prefHeight="54.0" prefWidth="246.0" text="Add/remove vehicle" textAlignment="CENTER" BorderPane.alignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>

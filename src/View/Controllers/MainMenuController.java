@@ -11,11 +11,11 @@ import java.io.IOException;
 public class MainMenuController extends Controller{
 
     public void AddUserButton() throws IOException{
-         route("Add_Users/Add_User.fxml");
+         route("Add_Users/Add_User_Menu.fxml");
     }
 
     public void AddVehicleButton() throws IOException{
-        route("Add_Vehicles/AddVehicle.fxml");
+        route("Add_Vehicles/AddVehicleMenu.fxml");
     }
 
     public void HiresButton() throws IOException{

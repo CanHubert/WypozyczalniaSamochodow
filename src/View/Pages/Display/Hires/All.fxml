@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="View.Controllers.Display.Hires.AllController"
+            prefHeight="475.0" prefWidth="500.0">
+    <top>
+        <Label text="All by ID" BorderPane.alignment="CENTER" />
+    </top>
+    <bottom>
+        <Label text="Label" BorderPane.alignment="CENTER" />
+    </bottom>
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextArea fx:id="textArea" prefHeight="330.0" prefWidth="560.0" />
+                <Region prefHeight="50.0" prefWidth="200.0" />
+                <Button fx:id="back" alignment="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="200.0" text="Back">
+                    <font>
+                        <Font size="21.0" />
+                    </font></Button>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <Region prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <Region prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+    </right>
+
+</BorderPane>

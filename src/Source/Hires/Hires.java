@@ -94,7 +94,7 @@ public class Hires implements Serializable{
     }
 
     private String hiresList(List<Hire> list){
-        StringBuilder sb= new StringBuilder("Source.Hires.Source.Hires:\n");
+        StringBuilder sb= new StringBuilder("Hires:\n");
         for(Hire h:list){
             sb.append(h).append("\n");
         }

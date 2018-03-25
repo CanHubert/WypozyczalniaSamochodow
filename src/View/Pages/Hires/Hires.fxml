@@ -29,8 +29,8 @@
    <center>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="276.0" text="Hire a vehicle" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="278.0" text="Return a vehicle" />
+            <Button mnemonicParsing="false" onAction="#hire" prefHeight="31.0" prefWidth="276.0" text="Hire a vehicle" />
+            <Button mnemonicParsing="false" onAction="#returnVehicle" prefHeight="31.0" prefWidth="278.0" text="Return a vehicle" />
             <Button mnemonicParsing="false" onAction="#MainMenuButton" prefHeight="31.0" prefWidth="319.0" text="Back" />
          </children>
          <padding>

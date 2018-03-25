@@ -9,7 +9,11 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane prefHeight="475.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Display.DisplayController">
+<BorderPane prefHeight="475.0"
+            prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="View.Controllers.Display.DisplayController">
    <top>
       <Label text="Display" BorderPane.alignment="CENTER">
          <font>
@@ -30,8 +34,8 @@
       <VBox prefHeight="200.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false"  onAction="#DisplayUsers" prefHeight="31.0" prefWidth="266.0" text="Users" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="275.0" text="Vehicles" />
-            <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="280.0" text="Hires" />
+            <Button layoutX="10.0" layoutY="10.0" onAction="#DisplayVehicles" mnemonicParsing="false" prefHeight="31.0" prefWidth="275.0" text="Vehicles" />
+            <Button layoutX="10.0" layoutY="41.0" onAction="#DisplayHires" mnemonicParsing="false" prefHeight="31.0" prefWidth="280.0" text="Hires" />
             <Button layoutX="10.0" layoutY="10.0" onAction="#MainMenuButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="272.0" text="Back" />
          </children>
          <padding>

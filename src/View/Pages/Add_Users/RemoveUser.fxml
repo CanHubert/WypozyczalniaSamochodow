@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="475" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Add_Users.RemoveUserController">
+   <top>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="45.0" prefWidth="119.0" text="Remove User" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Label text="Label" BorderPane.alignment="CENTER_LEFT" />
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="idTF" focusTraversable="false" maxWidth="200.0" prefWidth="200.0" promptText="Insert ID to delete" />
+            <Button mnemonicParsing="false" onAction="#removeUserButton" prefHeight="31.0" prefWidth="200.0" text="Delete" />
+            <Label fx:id="Msg" prefHeight="68.0" prefWidth="308.0" textFill="RED" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="206.0" text="Back" />
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

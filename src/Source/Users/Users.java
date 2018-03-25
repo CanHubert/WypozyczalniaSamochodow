@@ -12,7 +12,8 @@ import java.util.List;
 public class Users implements Serializable {
     private List<User> users;
     public Users(){users= new LinkedList<>();}
-    public void add(User u){users.add(u);}
+    public void add(User u){ users.add(u)
+        ;}
     public void remove (User u, Database db) throws RuntimeException{
         if (!isUserExist(u,db))
             throw new UserExistException();

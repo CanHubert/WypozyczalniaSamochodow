@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="475.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Add_Vehicles.AddPersonalCarController">
+    <top>
+        <Label alignment="CENTER" prefHeight="45.0" prefWidth="156.0" text="Add Personal Car" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="nameTF" focusTraversable="false" maxWidth="200.0" prefWidth="200.0" promptText="Insert Name" />
+                <TextField fx:id="milageTF" focusTraversable="false" maxWidth="200.0" prefWidth="200.0" promptText="Insert Millage" />
+            <ChoiceBox fx:id="transsmissionBox" prefHeight="31.0" prefWidth="200.0" />
+                <Button mnemonicParsing="false" onAction="#add" prefWidth="200.0" text="Add" />
+                <Label alignment="CENTER" fx:id="msg" prefHeight="63.0" prefWidth="300.0" wrapText="true" />
+                <Button mnemonicParsing="false" onAction="#back" prefWidth="200.0" text="Back" />
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>

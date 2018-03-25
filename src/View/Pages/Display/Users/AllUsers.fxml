@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Display.Users.AllUsersController">
+<BorderPane prefHeight="475.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controllers.Display.Users.AllUsersController">
    <top>
       <Label text="Label" BorderPane.alignment="CENTER" />
    </top>
@@ -15,17 +15,21 @@
       <Label text="Label" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea prefHeight="200.0" prefWidth="200.0" fx:id="textArea" />
-            <Button mnemonicParsing="false" text="Back" />
+            <TextArea fx:id="textArea" prefHeight="330.0" prefWidth="560.0" />
+            <Region prefHeight="50.0" prefWidth="200.0" />
+            <Button fx:id="back" onAction="#back" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Back">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
          </children>
       </VBox>
    </center>
    <left>
-      <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Region prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Region prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Region prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>

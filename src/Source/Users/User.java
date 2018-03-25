@@ -1,6 +1,7 @@
 package Source.Users;
 
 import Source.Database.Database;
+import Source.Exceptions.TooShortNameException;
 import Source.Interfaces.HasAuto;
 
 import java.io.Serializable;
@@ -11,8 +12,9 @@ public class User implements Serializable, HasAuto {
     private int id;
     private boolean hasAuto= false;
 
-    public User(String name, Database db){
+    public User(String name, Database db)throws TooShortNameException{
         this.id= db.getIdUser();
+        if(name.length() < 4) throw new TooShortNameException();
         this.name= name;
     }
 
